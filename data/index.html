@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html style="min-width: 330px;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>ESP32 Home Automation</title>
+
+        <link href="css/entireframework.min.css" rel="stylesheet" type="text/css">
+        <link href="css/toggle-switchy.css" rel="stylesheet" type="text/css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body style="background-color: rgb(32, 39, 46);">
+        <center>
+            <div>
+                <div style="height: 25px;"></div>
+                <div>
+                    <label style="margin-left: -180px; font-weight: bold; color: aliceblue;">COULEUR 1</label>
+                </div> 
+                <div style="height: 5px;"></div>           
+                <div>
+                    <input type="color" id="colorPicker" name="colorPicker1" style="width: 280px; height: 80px;">                
+                </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div style="height: 2px; background-color: rgb(104, 100, 134);"></div>
+            <div style="height: 15px;"></div>
+            <div>
+                <div>
+                    <label style="font-weight: bold; color: aliceblue; height: 30px">ACTIVER COULEUR 2</label>
+                </div>
+                <input type="checkbox" id="scales" name="scales" checked style="width: 330px; height: 35px; margin-top: 5px;">
+            </div>
+            <div style="height: 7px;"></div>
+            <div style="height: 2px; background-color: rgb(104, 100, 134);"></div>
+            <div style="height: 8px;"></div>
+            <div >
+                <div>
+                    <div style="height: 10px;"></div>
+                    <div>
+                        <label style="margin-left: -180px; font-weight: bold; color: aliceblue;">COULEUR 2</label>
+                    </div> 
+                    <div style="height: 5px;"></div>           
+                    <div>
+                        <input type="color" id="colorPicker" name="colorPicker2" style="width: 280px; height: 80px;">                
+                    </div>
+                </div>
+                <div>
+                    <div style="height: 12px;"></div>
+                    <div>
+                        <label style="margin-left: -225px; font-weight: bold; color: aliceblue;">MOTIF</label>
+                    </div> 
+                    <div style="height: 5px;"></div>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-1" checked>
+                        <input type="radio" name="select" id="option-2">
+                            <label for="option-1" class="option option-1">
+                            <div class="dot"></div>
+                                <span>GRADIENT</span>
+                                </label>
+                            <label for="option-2" class="option option-2">
+                            <div class="dot"></div>
+                                <span>VAGUE 1</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-3">
+                        <input type="radio" name="select" id="option-4">
+                            <label for="option-3" class="option option-3">
+                            <div class="dot"></div>
+                                <span>VAGUE 2</span>
+                                </label>
+                            <label for="option-4" class="option option-4">
+                            <div class="dot"></div>
+                                <span>VAGUE 3</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-5">
+                        <input type="radio" name="select" id="option-6">
+                            <label for="option-5" class="option option-5">
+                            <div class="dot"></div>
+                                <span>VAGUE 2</span>
+                                </label>
+                            <label for="option-6" class="option option-6">
+                            <div class="dot"></div>
+                                <span>VAGUE 3</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </center>
+        <script>
+            const colorPicker = document.getElementById('colorPicker');
+            const colorTarget = document.getElementById('colorTarget');
+            colorPicker.addEventListener('input', function()
+            {
+              const selectedColor = colorPicker.value;
+              colorTarget.style.backgroundColor = selectedColor;
+            });
+          </script>
+    
+    </body>
+  </html>
